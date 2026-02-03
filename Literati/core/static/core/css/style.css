@@ -205,3 +205,87 @@ footer {
     padding: 10px 20px;
     border-radius: 4px;
 }
+
+/* NAV BAR WRAPPER (ON TOP OF HERO) */
+.nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* INVERTED PARALLELOGRAM */
+.nav-parallelogram {
+    width: 50%;
+    background: #00c070;
+    color: white;
+    padding: 20px 40px;
+    transform: skew(-20deg);
+}
+
+/* FIX TEXT SKEW */
+.nav-parallelogram h1 {
+    transform: skew(20deg);
+    margin: 0;
+    font-size: 22px;
+    text-align: left;
+}
+
+.nav-parallelogram span {
+    font-weight: normal;
+}
+
+.hero {
+    margin-top: 0;
+}
+
+.footer-flyer {
+    display: flex;
+    width: 100%;
+}
+
+/* LEFT WHITE */
+.footer-left {
+    background: white;
+    padding: 15px 30px;
+    transform: skew(-20deg);
+    flex: 1;
+}
+
+.footer-left h4,
+.footer-left p {
+    transform: skew(20deg);
+    margin: 0;
+    color: #0a3d78;
+    font-weight: bold;
+}
+
+.footer-left span {
+    color: #00c070;
+}
+
+/* RIGHT BLUE */
+.footer-right {
+    background: #0a3d78;
+    color: white;
+    padding: 15px 40px;
+    transform: skew(-20deg);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer-right {
+    transform: skew(-20deg);
+}
+
+.footer-right {
+    transform: skew(-20deg);
+}
+
+/* FIX TEXT */
+.footer-right {
+    transform: skew(-20deg);
+}
