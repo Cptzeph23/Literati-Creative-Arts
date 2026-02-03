@@ -179,7 +179,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background: white;
-    padding: 15px 30px;
+    padding: 10px 30px;
 }
 
 .contact-left h4 {
@@ -288,4 +288,7 @@ footer {
 /* FIX TEXT */
 .footer-right {
     transform: skew(-20deg);
+}
+.name {
+    align-items: flex-end;
 }
