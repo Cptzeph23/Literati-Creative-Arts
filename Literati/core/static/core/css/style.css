@@ -78,8 +78,13 @@ body {
     border-radius: 8px;
 }
 
-.core-values ul {
-    padding-left: 18px;
+.core-values {
+    background: #0a3d78;
+    color: white;
+    padding: 18px;
+    margin: 30px auto 0 auto;
+    width: 70%;
+    border-radius: 8px;
 }
 
 /* RIGHT PANEL */
@@ -128,4 +133,75 @@ footer {
         padding: 20px;
         text-align: center;
     }
+}
+
+.hero-services {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.hero-services span {
+    color: #00c070; /* green | */
+    margin: 0 6px;
+}
+
+/* short dashed line (¼ width) */
+.hero-dashes {
+    width: 25%;
+    border-bottom: 2px dashed white;
+    margin-top: 15px;
+}
+
+.why-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.why-icon {
+    background: #0a3d78;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.flyer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+}
+
+.contact-left h4 {
+    margin: 0;
+    color: #0a3d78;
+}
+
+.phone {
+    margin: 5px 0 0 0;
+    color: #0a3d78;
+    font-weight: bold;
+}
+
+.phone span {
+    color: #00c070;
+    margin-right: 6px;
+}
+
+/* Right blue bar */
+.contact-right {
+    background: #0a3d78;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
 }
