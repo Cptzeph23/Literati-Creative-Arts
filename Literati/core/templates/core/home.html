@@ -5,105 +5,98 @@
     <meta charset="UTF-8">
     <title>Literati Creative Arts</title>
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<!-- HERO SECTION -->
+<!-- NAVBAR -->
+<header class="navbar">
+    <h2>Literati</h2>
+</header>
+
+<!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
+    <div class="overlay">
         <h1>Igniting Creativity Through Art</h1>
         <p>Voice Acting | Leadership Training | Editing | Graphics Designing</p>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="section green">
     <h2>Who We Are</h2>
     <p>
         We are a creative company determined to provide memorable services
         through creativity. Our mission is to ignite the spark of creativity
-        through art and help brands grow through quality content.
+        through art and help organizations grow through quality content.
     </p>
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="why">
+<section class="section">
     <h2>Why Choose Us?</h2>
-
-    <div class="why-box">
-        <h3>We Build Your Brand</h3>
-        <p>Creating meaningful content for marketing and advertising.</p>
-    </div>
-
-    <div class="why-box">
-        <h3>We Present Quality Work</h3>
-        <p>Affordable, reliable, and high-quality creative services.</p>
+    <div class="cards">
+        <div class="card">
+            <h3>We Build Your Brand</h3>
+            <p>Meaningful content for marketing and advertising.</p>
+        </div>
+        <div class="card">
+            <h3>Quality Work</h3>
+            <p>Affordable services without compromising excellence.</p>
+        </div>
     </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section class="section green">
     <h2>Our Services</h2>
 
-    <div class="service-grid">
-        <div class="service-card">
-            <h3>Graphics Designing</h3>
-            <ul>
-                <li>Posters & Flyers</li>
-                <li>Logos & Business Cards</li>
-                <li>PowerPoint Presentations</li>
-                <li>Company Profiles</li>
-            </ul>
-        </div>
+    {% regroup services by category as grouped_services %}
 
-        <div class="service-card">
-            <h3>Editing</h3>
+    <div class="cards">
+        {% for group in grouped_services %}
+        <div class="card">
+            <h3>{{ group.grouper }}</h3>
             <ul>
-                <li>Manuscripts</li>
-                <li>Letters & Speeches</li>
-                <li>Academic Work</li>
+                {% for service in group.list %}
+                <li>{{ service.title }}</li>
+                {% endfor %}
             </ul>
         </div>
-
-        <div class="service-card">
-            <h3>Voice Acting</h3>
-            <ul>
-                <li>Commercial Voice Overs</li>
-                <li>Narrations & Documentaries</li>
-                <li>Podcasts & Trailers</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <h3>Public Speaking</h3>
-            <ul>
-                <li>Leadership Training</li>
-                <li>Panel Moderation</li>
-                <li>Inspirational Talks</li>
-            </ul>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
 <!-- CORE VALUES -->
-<section class="values">
+<section class="section">
     <h2>Core Values</h2>
-    <ul>
-        <li>Quality Service</li>
-        <li>Excellence</li>
-        <li>Integrity</li>
-        <li>Creativity</li>
-        <li>Innovation</li>
-    </ul>
+    <div class="values">
+        <span>Quality</span>
+        <span>Excellence</span>
+        <span>Integrity</span>
+        <span>Creativity</span>
+        <span>Innovation</span>
+    </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CONTACT -->
+<section class="section green">
+    <h2>Contact Us</h2>
+
+    <form method="POST" class="contact-form">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p class="phone">📞 0723 882 891</p>
+</section>
+
 <footer>
-    <p>Contact Us: 0723 882 891</p>
-    <p>&copy; 2026 Literati Creative Arts</p>
+    <p>© 2026 Literati Creative Arts</p>
 </footer>
 
 </body>
 </html>
-
-
