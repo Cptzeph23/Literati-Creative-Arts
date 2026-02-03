@@ -75,3 +75,124 @@ footer {
     text-align: center;
     padding: 20px;
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+}
+
+.navbar {
+    background: #0a4fa3;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #0a4fa3, #0bb36d);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.green {
+    background: #0bb36d;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.card h3 {
+    color: #0a4fa3;
+}
+
+.green .card h3 {
+    color: #0bb36d;
+}
+
+/* VALUES */
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.values span {
+    background: #0a4fa3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+/* CONTACT */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #0a4fa3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.phone {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #0a4fa3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
