@@ -15,3 +15,13 @@ def home(request):
     return render(request, 'core/home.html', {
         'services': services
     })
+
+
+def about(request):
+    return render(request, 'core/about.html')
+
+def services(request):
+    return render(request, 'core/services.html')
+
+def portfolio(request):
+    return render(request, 'core/portfolio.html')

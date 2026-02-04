@@ -1,0 +1,54 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Literati Creative Arts</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrapper">
+    <div class="nav-parallelogram">
+        <h1>Literati Creative Arts <span>(Lit CA)</span></h1>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-links">
+        <div>
+            <h4>Company</h4>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p><span class="icon">📞</span> 0723 882 891</p>
+            <p><span class="icon">✉️</span> info@literati.co.ke</p>
+        </div>
+
+        <div>
+            <h4>Socials</h4>
+            <a href="#">📘 Facebook</a>
+            <a href="#">📸 Instagram</a>
+            <a href="#">🐦 Twitter</a>
+        </div>
+    </div>
+
+    <div class="footer-brand">
+        Muinde the Literati
+    </div>
+</footer>
+
+</body>
+</html>
+
+
