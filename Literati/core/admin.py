@@ -10,3 +10,17 @@ class ServiceAdmin(admin.ModelAdmin):
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'created_at')
+
+
+    from django.contrib import admin
+from .models import Page, ContactMessage
+
+@admin.register(Page)
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('page_name', 'title')
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'created_at')
+    readonly_fields = ('created_at',)
