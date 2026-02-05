@@ -1,19 +1,18 @@
-
 {% extends 'core/base.html' %}
 {% block content %}
 
 <section class="page">
-    <h2>About Literati Creative Arts</h2>
-    <p>
-        Literati Creative Arts (Lit CA) is a professional creative agency
-        offering artistic and communication solutions across different platforms.
-    </p>
-    <p>
-        Our goal is to ignite creativity and help brands tell compelling stories.
-    </p>
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.content|linebreaks }}</p>
 </section>
 
+<form action="{% url 'contact' %}" method="POST" class="contact-form">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+
 {% endblock %}
-
-
-
