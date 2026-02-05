@@ -20,7 +20,3 @@ class PageAdmin(admin.ModelAdmin):
     list_display = ('page_name', 'title')
 
 
-@admin.register(ContactMessage)
-class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'created_at')
-    readonly_fields = ('created_at',)
